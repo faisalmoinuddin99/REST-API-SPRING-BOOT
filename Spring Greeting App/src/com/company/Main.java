@@ -19,6 +19,9 @@ public class Main {
 
             GreetingService greetingService2 = (GreetingService) context.getBean("spanishGreetingService");
             greetingService2.greet("virat");
+
+            TimeService timeService = (TimeService) context.getBean("timeService12HourFormat");
+            System.out.println("The Current Time of Hour is : " + timeService.getCurrentTime());
         }
         catch (NoSuchBeanDefinitionException ne){
             System.out.println("NoSuchBeanDefinitionException ! Please recheck the bean name");
